@@ -1,0 +1,6 @@
+- Figura hay que declararla como abstracta
+- fillOval / drawOval trabaja con diametro
+- public class Objeto
+- public class Figuras
+- Buena idea usar size en vez de lado o diametro
+- private boolean relleno = false;

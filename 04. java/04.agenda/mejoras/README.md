@@ -1,0 +1,7 @@
+- No uso del getInfo
+- Separar capa de UI y capa de Agenda
+- Uso de métodos static por clase main
+- No llamar a los constructores como new Persona("","","",123)
+- Usar siempre variables y nombres de clases descritivos
+- Agenda no hereda de persona
+- int esUnico = agenda.buscarPersona()
