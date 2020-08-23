@@ -28,10 +28,15 @@ Motores principales para correr contenedores
 - Docker
 - Kubernetes
 
-# Instalar VirtualBox Windows y MAC
+
+# Para realizar en casa
+
+## OPCION 1
+
+### 1. Instalar VirtualBox Windows y MAC
 https://www.virtualbox.org/wiki/Downloads
 
-# Descargar imagen Ubuntu
+### 2. Descargar imagen Ubuntu
 https://releases.ubuntu.com/20.04/
 - Se descargará una ISO que es la que hay que cargar en virtualbox
 
@@ -41,3 +46,13 @@ Here's what Canonical lists as the recommended minimum system requirements for i
 - 25 GB of hard drive space (or USB stick, memory card or external drive but see LiveCD for an alternative approach)
 - VGA capable of 1024x768 screen resolution
 
+
+
+## OPCION 2
+
+### 1. Crear una partición en el disco
+
+### 2. Instalar ubuntu en ella. Para ello será necesario crear un usb bootable con el ubuntu dentro.
+
+
+## Instalar Pycharm, IntelliJ (según recomiende el fabricante) y Chrome con SNAP.
