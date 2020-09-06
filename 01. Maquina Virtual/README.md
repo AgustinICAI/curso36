@@ -59,3 +59,8 @@ https://releases.ubuntu.com/20.04/
 ### 1. Crear una partición en el disco (para no borrar el que ya tenemos, en windows se puede usar el gestor de particiones)
 ### 2. Instalar ubuntu en ella. Para ello será necesario crear un usb bootable con el ubuntu dentro.
 ## Instalar Pycharm, IntelliJ (según recomiende el fabricante) y Chromium con SNAP.
+
+# Tipos de procesos
+- Interactivos: tienen interacción (entrada/salida) con el usuario
+- Background: corren en segundo plano
+- Daemon: son procesos de background arrancados por el sistema operativo.
