@@ -140,7 +140,7 @@ $ ./hello_world
 
 # Tarea 5
 
-Realizar un programa python que muestre por pantalla una variable de entorno definida desde la shell y el nombre de mi ordenador
+Realizar un programa python que muestre por pantalla una variable de entorno definida desde la shell
 1. Crear una variable MIVARIABLE con el contenido que se desee
 2. Volcar en un fichero app.py el siguiente contenido
 ```python

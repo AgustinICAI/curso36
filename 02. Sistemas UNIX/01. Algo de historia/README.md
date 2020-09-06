@@ -8,7 +8,7 @@
 - Basándose en el proyecto abierto de BSD, surgen HP-UX, IBM's AIX, Sun's Solaris, Sequent, and Xenix.
 
 ## Inicio de GNU y LINUX
-- Richard Stallman buscaba crear una alternativa verdaderamente libre y de código abierto al sistema propietario Unix. Estaba trabajando en las utilidades y programas bajo el nombre GNU, un acrónimo recursivo que significa "¡GNU no es Unix!" Aunque había un proyecto de kernel en marcha, resultó ser difícil, y sin un kernel, el sueño del sistema operativo libre y de código abierto no podría realizarse.
+- Richard Stallman buscaba crear una alternativa verdaderamente libre y de código abierto al sistema propietario Unix. Estaba trabajando en las utilidades y programas bajo el nombre GNU, un acrónimo recursivo que significa "¡GNU no es Unix!".
 - Aunque había un proyecto de kernel en marcha, resultó ser difícil, y sin un kernel, el sueño del sistema operativo libre y de código abierto no podría realizarse. 
 - Fue el trabajo de Linus Torvald con 21 años —produciendo un kernel viable y funcional al que llamó Linux— lo que dio vida al sistema operativo completo. Dado que Linus estaba usando varias herramientas GNU (por ejemplo, GNU Compiler Collection, o GCC), la unión de las herramientas GNU y el kernel de Linux fue una combinación perfecta.
 

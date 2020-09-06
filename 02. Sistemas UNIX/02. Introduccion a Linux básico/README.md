@@ -1,8 +1,6 @@
 # Directorios principales de linux
 
-Es importante que el administrador conozca a fondo la estructura de los sistemas de archivos y la
-distribución de los ficheros en el árbol. La siguiente tabla muestra los directorios de mayor
-importancia en Linux
+La siguiente tabla muestra los directorios de mayor importancia en Linux
 
 
 | Directorio | Comentario |
