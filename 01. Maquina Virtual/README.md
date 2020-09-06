@@ -40,11 +40,11 @@ https://www.virtualbox.org/wiki/Downloads
 https://releases.ubuntu.com/20.04/
 - Se descargará una ISO que es la que hay que cargar en virtualbox
 
-Here's what Canonical lists as the recommended minimum system requirements for installing the desktop edition of Ubuntu 20.04 Focal Fossa (source). Keep in mind that this pertains to physical installs. Virtualized installs can actually get by with less.
-- 2 GHz dual core processor
-- 4 GiB RAM (system memory)
-- 25 GB of hard drive space (or USB stick, memory card or external drive but see LiveCD for an alternative approach)
-- VGA capable of 1024x768 screen resolution
+- Here's what Canonical lists as the recommended minimum system requirements for installing the desktop edition of Ubuntu 20.04 Focal Fossa (source). Keep in mind that this pertains to physical installs. Virtualized installs can actually get by with less.
+    - 2 GHz dual core processor
+    - 4 GiB RAM (system memory)
+    - 25 GB of hard drive space (or USB stick, memory card or external drive but see LiveCD for an alternative approach)
+    - VGA capable of 1024x768 screen resolution
 
 * Puede darse el problema de que a nivel de bios no esté habilitada la opción de hypervisor. Si da un error al instalar será necesario activarlo en bios.
 
