@@ -4,7 +4,7 @@
 - Se empieza a finales de los 60 por la empresa AT&T Bell Labs buscando un sistema operativo multitask y permitiera múltiples usuarios.
 - Por lo que triunfa es porque hasta entonces, los sistemas operativos se escribían pegados al hardware sobre el que iban a ejecutarse, mientras que UNIX dió esta capa de de independencia al escribirse en C.
 - Se construyó basándose en trabajar con ficheros y pipes.
-- La universidad de Berkeley empieza a escribir desarrollos por encima de UNIX creando BSD.
+- La universidad de Berkeley empieza a escribir desarrollos abiertos por encima de UNIX creando BSD.
 - Basándose en el proyecto abierto de BSD, surgen HP-UX, IBM's AIX, Sun's Solaris, Sequent, and Xenix.
 
 ## Inicio de GNU y LINUX

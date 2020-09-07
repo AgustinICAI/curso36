@@ -51,10 +51,6 @@ pwd
 man ls
 ```
 
-- Para seguir revisando comandos recomiendo seguir uno de los múltiples enlaces de internet donde explican los principales comandos básicos: cd, cp, mv, mkdir, rmdir, chown, chmod, locate, cat, grep.
-[Alguno de los comandos principales](https://likegeeks.com/main-linux-commands-easy-guide/#ls-command)
-
-
 # Directorios: rutas absolutas y relativas
 - Los ficheros y directorios se agrupan en forma de árbol, cuyo directorio raíz se denota por /. El mismo carácter barra inclinada se utiliza como separador de subdirectorios. 
 - Para hacer referencia a un fichero en el directorio actual, basta con dar su nombre. Sin embargo, el camino completo de dicho fichero se obtiene precediendo al nombre del fichero el camino completo del directorio que lo contiene.
@@ -87,7 +83,6 @@ $ls -l
 
 | Mandato | Permiso  directorio origen | Permisos fichero | Permisos directorio destino |
 | ------- | -------------------------- | ---------------- | --------------------------- |
-| cd | X | No aplicable | No aplicable |
 | ls | R | No aplicable | No aplicable |
 | mkdir | W, X | No aplicable | No aplicable |
 | rmdir | W, X | No aplicable | No aplicable |
@@ -111,11 +106,13 @@ rw------- 1 juan ventas febrero.txt
 ```
 | Comando | Resultado |
 | ------------------- | ----------------------------------------------- |
-| luis$ cd /home/juan | Error: falta permiso de acceso al directorio. |
-| luis$ cd /home/juan/datos | Correcto. |
-| luis$ cp enero.txt  /home/luis | Correcto (si tiene permiso de escritura en su directorio). |
-| luis$ cat febrero.txt | Error: falta permiso de lectura del fichero. |
-| luis$ vi enero.txt | Falta permiso para escribir en el fichero. |
+| luis$ cd /home/juan | ****** |
+| luis$ cd /home/juan/datos | ****** |
+| luis$ cp enero.txt  /home/luis | ****** |
+| luis$ cat febrero.txt | ****** |
+| luis$ vi enero.txt | ****** |
+
+TIPS: el comando cd (change directory), cp (copy), cat mostrar el contenido y vi comando para abrir y editar un fichero.
 
 Los permisos muchas veces se represental en octal, siendo esta la equivalencia:
 | Permiso | tipo | Equivalencia Octal |
