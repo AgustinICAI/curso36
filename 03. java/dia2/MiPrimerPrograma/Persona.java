@@ -5,7 +5,7 @@ class Persona{
 	String dni;
 	String tematicaFavorita;
 	int edad;
-	Pelicula peliculaReservada;	
+	Pelicula [] peliculaReservada;	
 	
 	//Constructor
 	Persona(String _nombre, String _apellido1, String _dni, String _tematicaFavorita, int _edad)
@@ -14,7 +14,8 @@ class Persona{
 		apellido1 = _apellido1;
 		dni = _dni;
 		tematicaFavorita = _tematicaFavorita;
-		edad = _edad;		
+		edad = _edad;
+		peliculaReservada = new Pelicula[5];
 	}
 	//Métodos
 	int getEdad()
@@ -53,31 +54,115 @@ class Persona{
 	String getInfo()
 	{
 		String info = "Nombre:" + nombre + " Apellido1:" + apellido1 + " edad:" + edad + " dni:" + dni + " Peliculas que le gustan:" + tematicaFavorita;
-		return info;
+		String peliculasReservadas = "";
+		//for (int i = 0 ; i < this.peliculaReservada.length; i ++)
+		// peliculasReservadas = peliculasReservadas + peliculaReservada[i].getNombre() + ", ";
+		
+		for (Pelicula p : peliculaReservada)
+			if (p != null)
+				peliculasReservadas = peliculasReservadas + p.getNombre() + ", ";
+		
+		return info + "y las peliculas reservadas: " + peliculasReservadas;
+	}
+	Pelicula[] getPeliculasReservadas()
+	{
+		return this.peliculaReservada;
 	}
 	
-	void setPeliculaReservada(Pelicula pelicula)
+	boolean addPeliculaReservada(Pelicula pelicula)
 	{
-		this.peliculaReservada = pelicula;
+		
+		int i = 0;
+		while (i < this.peliculaReservada.length)
+		{
+			if (peliculaReservada[i] == null)
+			{
+				peliculaReservada[i] = pelicula;
+				i = this.peliculaReservada.length;
+			}
+			else
+				i = i + 1;
+		}
+		if (i < peliculaReservada.length)
+			return true;
+		else
+			return false;
+		
+		
+		
+		/*
+		int i = 0;
+		while (i < this.peliculaReservada.length && this.peliculaReservada[i] != null)
+			i = i + 1;
+		if (i < peliculaReservada.length)
+		{
+			peliculaReservada[i] = pelicula;
+			return true;
+		}
+		else return false;
+		*/
+		
+		
+		
 	}
 	
-	void alquilaPelicula(Pelicula pelicula)
+	void devuelvePelicula(Pelicula p)
 	{
-		//this.peliculaReservada = pelicula;
-		this.setPeliculaReservada(pelicula);
-	}
-	
-	void devuelvePelicula()
-	{
-		this.setPeliculaReservada(null);
+		int i = 0;
+		boolean peliculaEncontrada = false;
+		while (i < this.peliculaReservada.length && peliculaEncontrada == false)
+		{
+			if(peliculaReservada[i] != null && peliculaReservada[i].getNombre().equals(p.getNombre()))
+			{
+				peliculaReservada[i] = null;
+				//i = peliculaReservada.length;
+				peliculaEncontrada = true;
+			}
+			i = i + 1;
+		}
+
+		
+		
+		
+		/*
+		int i = 0;
+		while (i < this.peliculaReservada.length && peliculaReservada[i] != null && peliculaReservada[i].getNombre() != p.getNombre())
+			i = i + 1;
+		if (i < peliculaReservada.length)
+			peliculaReservada[i] = null;
+		*/
 	}
 	
 	boolean tienePeliculaReservada()
 	{
-		if (this.peliculaReservada != null)
-			return true;
-		else
-			return false;
+		/*
+		int i = 0;
+		boolean peliculaEncontrada = false;
+		while(i < peliculaReservada.length)
+			if(peliculaReservada[i] !=	null)
+				peliculaEncontrada = true;
+			
+		return peliculaEncontrada;
+		*/
+		/*
+		int i = 0;
+		boolean peliculaEncontrada = false;
+		while(i < peliculaReservada.length && peliculaEncontrada == false)
+			if(peliculaReservada[i] !=	null)
+				peliculaEncontrada = true;
+			
+		return peliculaEncontrada;
+		*/
+		int i = 0;
+		while(i < peliculaReservada.length)
+		{
+			if(peliculaReservada[i] !=	null)
+				return true;
+			i = i + 1;
+		}
+		return false;
+		
+		
 	}
 	
 	

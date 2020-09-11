@@ -3,44 +3,40 @@ class App
 	//Este es el método que coge el terminal para ejecutar
 	public static void main(String argv[])
 	{
+		/*
 		Persona persona1 = new Persona("Juan","Lopez", "23414211B", "western", 23);
-		String nombre1 = persona1.getNombre();
-		System.out.println(nombre1 + " " + persona1.getApellido1());
-		
-		Persona persona2 = new Persona("Pepe","Perez", "23418711B", "drama", 17);
-		
-		System.out.println(persona1.getInfo());
-		System.out.println(persona2.getInfo());
-		
-		int num1 = 123;
-		nombre1 = "Juanito";
-		String nombre2 = "Pepito";
-		boolean flag = false;
-		double dec1 = 12313.4242;
-		
-		String nombreCompleto = persona1.getNombre() + " " + persona1.getApellido1();
+		Pelicula pelicula = new Pelicula("Tenet");
+		persona1.alquilaPelicula(pelicula);
 
-		System.out.println(num1);
-		System.out.println(nombreCompleto);
-		System.out.println(flag);
-		System.out.println(dec1);
+		Persona persona2 = new Persona("Pepe","Lopez", "23414211B", "western", 23);
+		persona2.alquilaPelicula(pelicula);
 		
+		System.out.println(persona1.getPeliculaReservada().getNombre());
+		System.out.println(persona2.getPeliculaReservada().getNombre());
+		
+		if(persona1.getPeliculaReservada() == persona2.getPeliculaReservada())
+			System.out.println("Las dos peliculas son iguales");
+		*/
+		
+		Persona persona1 = new Persona("Juan","Lopez", "23414211B", "western", 23);
+		persona1.addPeliculaReservada(new Pelicula("Peli1"));
+		persona1.addPeliculaReservada(new Pelicula("Peli2"));
+		persona1.addPeliculaReservada(new Pelicula("Peli3"));
+		persona1.addPeliculaReservada(new Pelicula("Peli4"));
+		//persona1.addPeliculaReservada(new Pelicula("Peli5"));
+		
+		/*for (Pelicula p : persona1.getPeliculasReservadas())
+			if (p!=null)
+				System.out.println(p.getNombre());*/
+			
 		System.out.println(persona1.getInfo());
-		persona1.setNombre("Juana");
+		
+		System.out.println(persona1.tienePeliculaReservada());
+		
+		persona1.devuelvePelicula(new Pelicula("Peli2"));
 		System.out.println(persona1.getInfo());
-	
-		int edadAComparar = 18;
-		if (persona2.getEdad() >= 21)
-			System.out.println("Es mayor como en estados EEUU");
-		else if (persona2.getEdad() > edadAComparar)
-			System.out.println("La persona " + persona2.getNombre() + " es mayor de " + edadAComparar + " años");
-		else
-		{
-			int edadRestante = edadAComparar - persona2.getEdad();
-			System.out.println("La persona " + persona2.getNombre() + " le quedan " + edadRestante);
-			if (persona2.getNombre().equals("Pepe"))
-				System.out.println("Es menor de edad pero se llama Pepe");
-		}
+
+		
 
 	}
 }
