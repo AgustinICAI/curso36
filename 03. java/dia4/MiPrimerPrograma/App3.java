@@ -3,28 +3,15 @@ class App3
 	//Trabajando con vectores
 	public static void main(String argv[])
 	{
-		int entero[] = new int[10];
-		entero[5] = 1231241;
-		
-		System.out.println(entero);
-		System.out.println("Posicion 5 -> " + entero[5]);
-		
-		System.out.println("El tamaño del vector es: " + entero.length);
-		
-		for (int i = 0; i < entero.length; i ++ )
-		{
-			System.out.println("Posicion " + i + " -> " + entero[i]);
-		}
-		
-		Persona persona[] = new Persona[10];
-		
-		for (int i = 0 ; i < persona.length; i++)
-			persona[i] = new Persona("Juan","Lopez", "23414211B", "western", i);
+		Persona p1 = new Persona("Juan","40231");
 
-		for (int i = 0; i < persona.length; i ++)
-		{
-			System.out.println("Posicion " + i + " -> " + persona[i].getInfo());
-		}
-		
+		p1.addPeliculaReservada(new Pelicula("The gentlemen"));
+		p1.addPeliculaReservada(new Pelicula("Tenet"));
+		p1.addPeliculaReservada(new Pelicula("Origin",2010,98));
+		p1.devuelvePelicula(new Pelicula("Origin"));
+
+		System.out.println(p1);
+
+
 	}
 }

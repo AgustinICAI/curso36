@@ -1,21 +1,33 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 class Persona{
+
 	//Atributos
-	String nombre;
-	String apellido1;
-	String dni;
-	String tematicaFavorita;
-	int edad;
-	Pelicula [] peliculaReservada;	
+	private String nombre;
+	private String apellido1;
+	private String dni;
+	private String tematicaFavorita;
+	private int edad;
+	ArrayList<Pelicula> peliculaReservada;
+
+	static int MAYOR_EDAD = 18;
 	
 	//Constructor
-	Persona(String _nombre, String _apellido1, String _dni, String _tematicaFavorita, int _edad)
+	public Persona(String nombre, String dni) {
+		this.nombre = nombre;
+		this.dni = dni;
+		peliculaReservada = new ArrayList<>();
+	}
+
+	public Persona(String nombre, String apellido1, String dni, String tematicaFavorita, int edad)
 	{
-		nombre = _nombre;
-		apellido1 = _apellido1;
-		dni = _dni;
-		tematicaFavorita = _tematicaFavorita;
-		edad = _edad;
-		peliculaReservada = new Pelicula[5];
+		this.nombre = nombre;
+		this.apellido1 = apellido1;
+		this.dni = dni;
+		this.tematicaFavorita = tematicaFavorita;
+		this.edad = edad;
+		peliculaReservada = new ArrayList<>();
 	}
 	//Métodos
 	int getEdad()
@@ -41,17 +53,10 @@ class Persona{
 
 	boolean esMayorEdad()
 	{
-		if(edad >= 18)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		return this.getEdad() >= Persona.MAYOR_EDAD;
 	}
 
-	String getInfo()
+	public String toString()
 	{
 		String info = "Nombre:" + nombre + " Apellido1:" + apellido1 + " edad:" + edad + " dni:" + dni + " Peliculas que le gustan:" + tematicaFavorita;
 		String peliculasReservadas = "";
@@ -59,110 +64,30 @@ class Persona{
 		// peliculasReservadas = peliculasReservadas + peliculaReservada[i].getNombre() + ", ";
 		
 		for (Pelicula p : peliculaReservada)
-			if (p != null)
-				peliculasReservadas = peliculasReservadas + p.getNombre() + ", ";
+			peliculasReservadas = peliculasReservadas + p.getNombre() + ", ";
 		
 		return info + "y las peliculas reservadas: " + peliculasReservadas;
 	}
-	Pelicula[] getPeliculasReservadas()
+
+	ArrayList<Pelicula> getPeliculasReservadas()
 	{
 		return this.peliculaReservada;
 	}
 	
 	boolean addPeliculaReservada(Pelicula pelicula)
 	{
-		
-		int i = 0;
-		while (i < this.peliculaReservada.length)
-		{
-			if (peliculaReservada[i] == null)
-			{
-				peliculaReservada[i] = pelicula;
-				i = this.peliculaReservada.length;
-			}
-			else
-				i = i + 1;
-		}
-		if (i < peliculaReservada.length)
-			return true;
-		else
-			return false;
-		
-		
-		
-		/*
-		int i = 0;
-		while (i < this.peliculaReservada.length && this.peliculaReservada[i] != null)
-			i = i + 1;
-		if (i < peliculaReservada.length)
-		{
-			peliculaReservada[i] = pelicula;
-			return true;
-		}
-		else return false;
-		*/
-		
-		
-		
+		return this.peliculaReservada.add(pelicula);
 	}
 	
 	void devuelvePelicula(Pelicula p)
 	{
-		int i = 0;
-		boolean peliculaEncontrada = false;
-		while (i < this.peliculaReservada.length && peliculaEncontrada == false)
-		{
-			if(peliculaReservada[i] != null && peliculaReservada[i].getNombre().equals(p.getNombre()))
-			{
-				peliculaReservada[i] = null;
-				//i = peliculaReservada.length;
-				peliculaEncontrada = true;
-			}
-			i = i + 1;
-		}
-
-		
-		
-		
-		/*
-		int i = 0;
-		while (i < this.peliculaReservada.length && peliculaReservada[i] != null && peliculaReservada[i].getNombre() != p.getNombre())
-			i = i + 1;
-		if (i < peliculaReservada.length)
-			peliculaReservada[i] = null;
-		*/
+		this.peliculaReservada.remove(p);
 	}
 	
 	boolean tienePeliculaReservada()
 	{
-		/*
-		int i = 0;
-		boolean peliculaEncontrada = false;
-		while(i < peliculaReservada.length)
-			if(peliculaReservada[i] !=	null)
-				peliculaEncontrada = true;
-			
-		return peliculaEncontrada;
-		*/
-		/*
-		int i = 0;
-		boolean peliculaEncontrada = false;
-		while(i < peliculaReservada.length && peliculaEncontrada == false)
-			if(peliculaReservada[i] !=	null)
-				peliculaEncontrada = true;
-			
-		return peliculaEncontrada;
-		*/
-		int i = 0;
-		while(i < peliculaReservada.length)
-		{
-			if(peliculaReservada[i] !=	null)
-				return true;
-			i = i + 1;
-		}
-		return false;
-		
-		
+		return ! peliculaReservada.isEmpty();
+
 	}
 	
 	
