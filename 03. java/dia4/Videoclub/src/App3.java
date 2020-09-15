@@ -9,8 +9,9 @@ class App3
 		p1.addPeliculaReservada(new Pelicula("Tenet"));
 		p1.addPeliculaReservada(new Pelicula("Origin",2010,98));
 		p1.devuelvePelicula(new Pelicula("Origin"));
-
 		System.out.println(p1);
+
+
 
 
 	}
