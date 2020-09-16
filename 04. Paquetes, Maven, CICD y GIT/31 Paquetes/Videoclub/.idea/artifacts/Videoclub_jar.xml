@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Videoclub:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Videoclub_jar</output-path>
+    <root id="archive" name="Videoclub.jar">
+      <element id="module-output" name="Videoclub" />
+    </root>
+  </artifact>
+</component>
